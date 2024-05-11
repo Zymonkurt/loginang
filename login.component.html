@@ -1,0 +1,26 @@
+<app-login>
+<header>
+  <title>Login</title>
+  <h1>PRO FILIQUE</h1>
+</header>
+
+<div class="login">
+  <h1>Login</h1>
+  <form (ngSubmit)="onSubmit()">
+      <label>Email Address</label>
+      <br>
+      <input type="email" name="email" id="emailInput" required [(ngModel)]="email">
+      <br>
+      <br>
+      <label>Password</label>
+      <br>
+      <div class="password-container">
+          <input type="password" name="pass" id="password" required [(ngModel)]="password">
+          <button type="button" id="showPassword" (click)="togglePasswordVisibility()"></button>
+      </div>
+
+      <input type="submit" name="submit" value="Login to Continue">
+  </form>
+  <p>Don't have an account? <a routerLink="/register">Sign Up</a></p>
+</div>
+</app-login>
